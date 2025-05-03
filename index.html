@@ -1,23 +1,166 @@
-<!Doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Adam Karst V2</title>
-    <link href="css/site.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Karst | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    nav {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .content-block {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-block::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #0077cc 0%, #66c2ff 100%);
+      opacity: 0.1;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .content-block p {
+      position: relative;
+      font-size: 1rem;
+      color: #444;
+      z-index: 1;
+    }
+
+    .content-block h3 {
+      color: #0077cc;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #ffffff;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="content-body">
-            <div class="success-text">Adam Karst</div>
-        </div>
-        <div class="step">
-            <div class="step-icon">
-                <img src="img/lightbulbWhite.svg">
-            </div>
-            <div class="step-text">A work in progress.</div>
-        </div>
-    </div>
-</body>
+  <header>
+    <h1>Adam Karst</h1>
 
+    <p>Fullstack Support Developer & Business Analyst/ Process Designer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content-block">
+      <p>
+        I'm Adam Karst, a fullstack support developer and business analyst/designer with a strong background in creating robust systems, solving technical challenges, and bridging the gap between technology and business strategy. With a keen eye for process optimization and a deep understanding of end-to-end software development, I help organizations deliver impactful solutions.
+      </p>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <h2>My Expertise</h2>
+
+    <div class="content-block">
+      <h3>Fullstack Support Development</h3>
+      <p>
+        I provide technical support and development across the full stack—frontend, backend, and infrastructure. My skills include diagnosing complex issues, maintaining legacy systems, improving codebases, and automating processes to increase efficiency and reliability.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h3>Business Analysis & Design</h3>
+      <p>
+        I specialize in understanding business needs and translating them into technical requirements. My approach combines user-centered design principles with data-driven decision-making to ensure solutions are practical, scalable, and aligned with stakeholder goals.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h3>Collaboration & Communication</h3>
+      <p>
+        Working closely with developers, managers, and clients, I ensure clear communication across all phases of development. My ability to translate technical details into understandable language helps drive alignment and successful project delivery.
+      </p>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:adam@adamkarst.com">adam@adamkarst.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/adam-karst-230a7462/" target="_blank">@adamkarst</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Adam Karst. All rights reserved.</p>
+  </footer>
+</body>
 </html>
