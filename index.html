@@ -1,248 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adam Karst </title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='32' fill='white'%3EAK%3C/text%3E%3C/svg%3E" />
- 
- <style>
-    :root {
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-      --content-bg: #fff;
-      --accent-color: #555;
-      --shadow-color: rgba(0, 0, 0, 0.06);
-      --link-color: #444;
-      --link-hover-color: #222;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Karst </title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='32' fill='white'%3EAK%3C/text%3E%3C/svg%3E" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --content-bg: #fff;
+            --accent-color: #555;
+            --shadow-color: rgba(0, 0, 0, 0.06);
+            --link-color: #444;
+            --link-hover-color: #222;
+        }
 
-    body.dark {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --content-bg: #1e1e1e;
-      --accent-color: #bbb;
-      --shadow-color: rgba(255, 255, 255, 0.05);
-      --link-color: #ccc;
-      --link-hover-color: #fff;
-    }
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --content-bg: #1e1e1e;
+            --accent-color: #bbb;
+            --shadow-color: rgba(255, 255, 255, 0.05);
+            --link-color: #ccc;
+            --link-hover-color: #fff;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-    header {
-      background-color: var(--content-bg);
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px var(--shadow-color);
-      position: relative;
-    }
+        header {
+            background-color: var(--content-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            position: relative;
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-    header p {
-      font-size: 1.1rem;
-      color: var(--text-color);
-    }
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
 
-    .toggle-wrapper {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+        .toggle-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    .dark-toggle {
-      width: 60px;
-      height: 30px;
-      background-color: var(--accent-color);
-      border-radius: 50px;
-      position: relative;
-      cursor: pointer;
-    }
+        .dark-toggle {
+            width: 60px;
+            height: 30px;
+            background-color: var(--accent-color);
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+        }
 
-    .dark-toggle::before {
-      content: '☀';
-      position: absolute;
-      left: 5px;
-      top: 4px;
-      width: 22px;
-      height: 22px;
-      background-color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      transition: transform 0.3s;
-    }
+        .dark-toggle::before {
+            content: '☀';
+            position: absolute;
+            left: 5px;
+            top: 4px;
+            width: 22px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
 
-    body.dark .dark-toggle::before {
-      content: '🌙';
-      transform: translateX(30px);
-    }
+        body.dark .dark-toggle::before {
+            content: '🌙';
+            transform: translateX(30px);
+        }
 
-    nav {
-      text-align: center;
-      margin: 2rem 0;
-    }
+        nav {
+            text-align: center;
+            margin: 2rem 0;
+        }
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--link-color);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: var(--link-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    nav a:hover {
-      color: var(--link-hover-color);
-    }
+        nav a:hover {
+            color: var(--link-hover-color);
+        }
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
 
-    .content-block {
-      background: var(--content-bg);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px var(--shadow-color);
-      margin-bottom: 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: background-color 0.3s, box-shadow 0.3s;
-      border-left: 6px solid var(--accent-color);
-    }
+        .content-block {
+            background: var(--content-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px var(--shadow-color);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            border-left: 6px solid var(--accent-color);
+        }
 
-    .content-block::before {
-      content: "";
-      display: none;
-    }
+        .content-block::before {
+            content: "";
+            display: none;
+        }
 
-    .content-block p, .content-block h3 {
-      position: relative;
-      z-index: 1;
-      color: var(--text-color);
-    }
+        .content-block p,
+        .content-block h3 {
+            position: relative;
+            z-index: 1;
+            color: var(--text-color);
+        }
 
-    .content-block h3 {
-      color: var(--accent-color);
-      margin-bottom: 0.5rem;
-    }
+        .content-block h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
 
-    a {
-      color: var(--link-color);
-      text-decoration: underline;
-      transition: color 0.3s;
-    }
+        a {
+            color: var(--link-color);
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
 
-    a:hover {
-      color: var(--link-hover-color);
-    }
+        a:hover {
+            color: var(--link-hover-color);
+        }
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: var(--content-bg);
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-  </style>
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--content-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .contact-card i {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .contact-card span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--content-bg);
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
+
 <body class="dark">
-  <header><div class="toggle-wrapper">
-    <div class="dark-toggle" onclick="toggleDarkMode()"></div>
-  </div>
-    <h1>Adam Karst</h1>
+    <header>
+        <div class="toggle-wrapper">
+            <div class="dark-toggle" onclick="toggleDarkMode()"></div>
+        </div>
+        <h1>Adam Karst</h1>
 
-    <p>Fullstack Support Developer & Business Analyst/ Process Designer</p>
-  </header>
+        <p>Fullstack Support Developer & Business Analyst/ Process Designer</p>
+    </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="content-block">
-      <p>
-        My name is Adam Karst, I was born and raised in Calgary Alberta, Canada. I am a Senior fullstack support developer and business process analyst with a strong background in creating robust systems, solving technical challenges, and bridging the gap between technology and business strategy. With a keen eye for process optimization and a deep understanding of end-to-end software development, I help organizations deliver impactful solutions.
-      </p>
-    </div>
-  </section>
 
-  <section id="expertise">
-    <h2>My Expertise</h2>
-
-    <div class="content-block">
-      <h3>Fullstack Support Development</h3>
-      <p>
-        I provide technical support and development across the full stack—frontend, backend, and infrastructure. My skills include diagnosing complex issues, maintaining legacy systems, improving codebases, and automating processes to increase efficiency and reliability.
-      </p>
-    </div>
-
-    <div class="content-block">
-      <h3>Business Analysis & Design</h3>
-      <p>
-        I specialize in understanding business needs and translating them into technical requirements. My approach combines user-centered design principles with data-driven decision-making to ensure solutions are practical, scalable, and aligned with stakeholder goals.
-      </p>
-    </div>
-
-    <div class="content-block">
-      <h3>Collaboration & Communication</h3>
-      <p>
-        Working closely with developers, managers, and clients, I ensure clear communication across all phases of development. My ability to translate technical details into understandable language helps drive alignment and successful project delivery.
-      </p>
-    </div>
-  </section>
-  <section id="contact">
-        <h2>Contact</h2>
+    <section id="about">
+        <h2>About Me</h2>
         <div class="content-block">
-        <p><a href="mailto:adam@adamkarst.com">adam@adamkarst.com</a></p>
-        <p><a href="https://www.linkedin.com/in/adam-karst-230a7462/" target="_blank">@adamkarst</a></p>
-        
-</div>
-      </section>
-   
-  </section>
+            <p>
+                My name is Adam Karst, I was born and raised in Calgary Alberta, Canada. I am a Senior fullstack support
+                developer and business process analyst with a strong background in creating robust systems, solving
+                technical challenges, and bridging the gap between technology and business strategy. With a keen eye for
+                process optimization and a deep understanding of end-to-end software development, I help organizations
+                deliver impactful solutions.
+            </p>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Adam Karst. All rights reserved.</p>
-  </footer>
+    <section id="expertise">
+        <h2>My Expertise</h2>
+
+        <div class="content-block">
+            <h3>Fullstack Support Development</h3>
+            <p>
+                I provide technical support and development across the full stack—frontend, backend, and infrastructure.
+                My skills include diagnosing complex issues, maintaining legacy systems, improving codebases, and
+                automating processes to increase efficiency and reliability.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Business Analysis & Design</h3>
+            <p>
+                I specialize in understanding business needs and translating them into technical requirements. My
+                approach combines user-centered design principles with data-driven decision-making to ensure solutions
+                are practical, scalable, and aligned with stakeholder goals.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Collaboration & Communication</h3>
+            <p>
+                Working closely with developers, managers, and clients, I ensure clear communication across all phases
+                of development. My ability to translate technical details into understandable language helps drive
+                alignment and successful project delivery.
+            </p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-cards">
+            <a href="mailto:adam@adamkarst.com" class="contact-card" target="_blank">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/adam-karst-230a7462/" class="contact-card" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/adam_karst/" class="contact-card" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://bsky.app/profile/karstadam.bsky.social" class="contact-card" target="_blank">
+                <i class="fas fa-cloud"></i>
+                <span>Bluesky</span>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adam Karst. All rights reserved.</p>
+    </footer>
 </body>
 
 <script>
     function toggleDarkMode() {
-      document.body.classList.toggle('dark');
+        document.body.classList.toggle('dark');
     }
-  </script>
+</script>
+
 </html>
