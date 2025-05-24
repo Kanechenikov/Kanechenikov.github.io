@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Karst | Fullstack & Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --accent-color: #aaa;
+            --card-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('img/aba91a8e-8717-4185-b6d9-1b35ff1eb438.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Optional overlay for contrast */
+            padding: 2rem;
+            border-radius: 16px;
+            max-width: 600px;
+        }
+
+        .hero-button {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #eee;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--card-bg);
+            color: var(--text-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .hero a:hover {
+            background: var(--accent-color);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px var(--shadow-color);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 0.2s;
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item span {
+            display: block;
+            color: var(--text-color);
+            margin-top: 0.5rem;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .section-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section-image {
+            flex: 1 1 50%;
+            padding: 1rem;
+        }
+
+        .section-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content {
+            flex: 1 1 50%;
+            padding: 2rem;
+        }
+
+        .section-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Adam Karst</h1>
+            <p>Fullstack Support Developer & Business Analyst</p>
+            <a href="#contact" class="hero-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section class="section-row">
+        <div class="section-image">
+            <img src="img/pexels-kevin-ku-92347-577585.jpg" alt="Development Process">
+        </div>
+        <div class="section-content">
+            <h2>Fullstack Support Development</h2>
+            <p>
+                I provide technical support and development across the full stack—frontend, backend, and infrastructure.
+                My skills include diagnosing complex issues, maintaining legacy systems, improving codebases, and
+                automating processes to increase efficiency and reliability.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-row reverse">
+        <div class="section-image">
+            <img src="img/pexels-seven11nash-380768.jpg" alt="Business Analysis">
+        </div>
+        <div class="section-content">
+            <h2>Business Analysis & Design</h2>
+            <p>
+                I specialize in understanding business needs and translating them into technical requirements. My
+                approach combines user-centered design principles with data-driven decision-making to ensure solutions
+                are practical, scalable, and aligned with stakeholder goals.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-row">
+        <div class="section-image">
+            <img src="img/igor-kyryliuk-tetiana-kravchenko-n4mvQ1YWk1U-unsplash.jpg" alt="Communication & Collaboration">
+        </div>
+        <div class="section-content">
+            <h2>Collaboration & Communication</h2>
+            <p>
+                Working closely with developers, managers, and clients, I ensure clear communication across all phases
+                of development. My ability to translate technical details into understandable language helps drive
+                alignment and successful project delivery.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <a href="mailto:adam@example.com" class="contact-item" target="_blank">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/adamkarst" class="contact-item" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/adamkarst" class="contact-item" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://bsky.app/profile/adamkarst" class="contact-item" target="_blank">
+                <i class="fas fa-cloud"></i>
+                <span>Bluesky</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Adam Karst — All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
